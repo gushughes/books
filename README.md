@@ -46,3 +46,6 @@ I hope to contribute to open source GitHub projects in the future.
 - Test the hypothesis by identifying and explaining significant descriptive statistics (if any) in publication dates
 - Test the hypothesis by identifying and explaining significant visual patterns (if any) in publication dates
 - Create a GitHub Pages site for documentation using MkDocs
+
+- ## License
+This project is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE). See the LICENSE file for details.
