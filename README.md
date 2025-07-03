@@ -37,18 +37,15 @@ Learn how to use Python (Pandas, NumPy, Matplotlib, Seaborn) for basic EDA
 - Load the CSV into a Pandas DataFrame (Data structure: Dictionary)  
 - Check columns, data types and missing values  
 - Data cleaning and preprocessing steps (explore variable types, strings)  
-- Analysis techniques (algorithms or functions applied)  
-
-### Possible insights
+- Analysis techniques (algorithms or functions applied). Possible insights
 - **book_title:** Search by title, count duplicates & keyword analysis  
 - **author:** Grouping by author & most prolific authors  
 - **first_published:** Time trends, earliest/latest books & historical filters  
 - **page_count:** Average/min/max page stats & filtering by size  
 - **author_nationality:** Diversity analysis & regional trends  
 - **genre:** Popular genres, multi-genre grouping & filtering  
-
-Clean or transform data as needed.  
-Do my best to adhere to PEP 8 and other best practices along the way.
+- Clean or transform data as needed.  
+- Do my best to adhere to PEP 8 and other best practices along the way.
 
 ### Output
 
