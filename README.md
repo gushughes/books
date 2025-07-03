@@ -39,7 +39,7 @@ Learn how to use Python (Pandas, NumPy, Matplotlib, Seaborn) for basic EDA
 - Data cleaning and preprocessing steps (explore variable types, strings)  
 - Analysis techniques (algorithms or functions applied)  
 
-**Analysis Possibilities:**  
+### Possible insights
 - **book_title:** Search by title, count duplicates & keyword analysis  
 - **author:** Grouping by author & most prolific authors  
 - **first_published:** Time trends, earliest/latest books & historical filters  
