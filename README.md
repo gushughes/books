@@ -8,8 +8,8 @@ This project looks at whether authors’ publication dates show any real pattern
 
 ## Tools (*add versions here)
 
-- LibreOffice Calc – storing & organising data  
-- Python & JupyterLab – EDA  
+- LibreOffice Calc – storing & data handling  
+- Python & JupyterLab – data analysis
 - GitHub – version control  
 - Markdown & MkDocs – documentation  
 
