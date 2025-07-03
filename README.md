@@ -15,34 +15,34 @@ This project looks at whether authors’ publication dates show any real pattern
 
 I hope to contribute to open source GitHub projects in the future.
 
-## Project process & learning goals
+## Project Process & Learning Goals
 
 ### Input
-
-Collate data into a CSV file with five columns:
-
-- book_title  
-- author  
-- author_nationality  
-- first_published  
-- page_count  
-- genre  
-
-Learn a little bit about GitHub version control
+- Collate data into a CSV file with these columns:
+  - `book_title`
+  - `author`
+  - `author_nationality`
+  - `first_published`
+  - `page_count`
+  - `genre`
+- Learn the basics of GitHub version control
 
 ### Handling
-
-Learn how to use Python (Pandas, NumPy, Matplotlib, Seaborn) for basic EDA
-
-- Load the CSV into a Pandas DataFrame (Data structure: Dictionary)  
-- Check columns, data types and missing values  
-- Data cleaning and preprocessing steps (explore variable types, strings)  
-- Analysis techniques (algorithms or functions applied). Possible insights include **book_title:** Search by title, count duplicates & keyword analysis, **author:** Grouping by author & most prolific authors, **first_published:** Time trends, earliest/latest books & historical filters, **page_count:** Average/min/max page stats & filtering by size, **author_nationality:** Diversity analysis & regional trends, and **genre:** Popular genres, multi-genre grouping & filtering  
-- Clean or transform data as needed.  
-- Do my best to adhere to PEP 8 and other best practices along the way.
+- Learn to use Python libraries (Pandas, NumPy, Matplotlib, Seaborn) for basic exploratory data analysis (EDA)
+- Load the CSV into a Pandas DataFrame (data structure: dictionary)
+- Check columns, data types, and handle missing values
+- Perform data cleaning and preprocessing (explore variable types, string formatting)
+- Apply analysis techniques (algorithms or functions) to extract insights such as:
+  - **book_title:** Search by title, count duplicates, keyword analysis
+  - **author:** Grouping authors and identifying most prolific authors
+  - **first_published:** Analyze time trends, earliest/latest books amd historical filters
+  - **page_count:** Calculate average, minimum, maximum page counts; filter by size
+  - **author_nationality:** Diversity analysis and regional trends
+  - **genre:** Identify popular genres, multi-genre grouping and filtering
+- Clean or transform data as needed
+- Follow PEP 8 and other best practices throughout the process
 
 ### Output
-
-- Test hypothesis by finding & explaining significant descriptive statistics (if any) in publication dates  
-- Test hypothesis by finding & explaining significant visual patterns (if any) in publication dates  
-- Create a GitHub site to show documentation, using MkDocs
+- Test the hypothesis by identifying and explaining significant descriptive statistics (if any) in publication dates
+- Test the hypothesis by identifying and explaining significant visual patterns (if any) in publication dates
+- Create a GitHub Pages site for documentation using MkDocs
