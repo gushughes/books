@@ -18,7 +18,7 @@ I hope to contribute to open source GitHub projects in the future.
 ## Project Process & Learning Goals
 
 ### Input
-- Collate data into a CSV file with these columns:
+- Collate data into a CSV file ('entries') with these columns:
   - `book_title`
   - `author`
   - `author_nationality`
