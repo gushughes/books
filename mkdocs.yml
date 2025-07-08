@@ -1,0 +1,7 @@
+site_name: Bookshelf
+theme:
+  name: material
+
+plugins:
+  - blog
+  - search
