@@ -1,0 +1,20 @@
+/* Retro terminal vibe */
+body {
+  background-color: #111;
+  color: #33ff33;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: #00ffff;
+}
+
+h1, h2, h3, h4 {
+  color: #ffcc00;
+}
+
+.md-content {
+  background: #000;
+  padding: 2rem;
+  border: 1px solid #333;
+}
