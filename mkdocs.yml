@@ -1,7 +1,25 @@
-site_name: Bookshelf
+site_name: Bookshelf Archive
 theme:
   name: material
+  palette:
+    - scheme: slate
+      primary: amber
+      accent: deep orange
+  font:
+    text: Roboto Mono
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
 
-plugins:
-  - blog
-  - search
+extra_css:
+  - stylesheets/timemachine.css
+
+nav:
+  - Home: index.md
+  - Entries: entries.md
+  - About: about.md
