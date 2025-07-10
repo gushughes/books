@@ -9,9 +9,9 @@ This project looks at whether authors’ publication dates show any real pattern
 ## Tools (*add versions here)
 
 - LibreOffice Calc – storing data  
-- Python & JupyterLab – data handling & analysis
+- Python (JupyterLab or Marimo) – data handling & analysis
 - GitHub – version control  
-- Markdown & MkDocs – documentation  
+- Markdown, MkDocs & Github pages – documentation  
 
 I hope to contribute to open source GitHub projects in the future.
 
