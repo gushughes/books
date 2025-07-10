@@ -2,7 +2,7 @@ site_name: Bookshelf Archive
 theme:
   name: material
   palette:
-    - scheme: slate
+      scheme: slate
       primary: amber
       accent: deep orange
   font:
