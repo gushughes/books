@@ -1,14 +1,3 @@
-HEAD
-site_name: Bookeshelf
-theme:
-  name: mkdocs
-nav:
-  - Home: index.md
-  - Blog: blog/first-post.md
-
-extra_css:
-  - stylesheets/extra.css
-
 site_name: Bookshelf Archive
 theme:
   name: material
@@ -26,12 +15,8 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
-
-extra_css:
-  - stylesheets/timemachine.css
-
 nav:
   - Home: index.md
-  - Entries: entries.md
-  - About: about.md
-57780e06ca8d67a1ce40886d9a5b91427c4ebaa0
+  - Blog: blog/first-post.md
+extra_css:
+  - stylesheets/extra.css
