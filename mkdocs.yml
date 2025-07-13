@@ -1,3 +1,4 @@
+HEAD
 site_name: Bookeshelf
 theme:
   name: mkdocs
@@ -7,3 +8,30 @@ nav:
 
 extra_css:
   - stylesheets/extra.css
+
+site_name: Bookshelf Archive
+theme:
+  name: material
+  palette:
+      scheme: slate
+      primary: amber
+      accent: deep orange
+  font:
+    text: Roboto Mono
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/timemachine.css
+
+nav:
+  - Home: index.md
+  - Entries: entries.md
+  - About: about.md
+57780e06ca8d67a1ce40886d9a5b91427c4ebaa0
