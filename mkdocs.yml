@@ -1,7 +1,9 @@
-site_name: Bookshelf
+site_name: Bookeshelf
 theme:
-  name: material
+  name: mkdocs
+nav:
+  - Home: index.md
+  - Blog: blog/first-post.md
 
-plugins:
-  - blog
-  - search
+extra_css:
+  - stylesheets/extra.css
