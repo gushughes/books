@@ -2,8 +2,7 @@
 
 Bookshelf is a **learning-focused REST API project** designed to explore modern API development while **prioritising clear, human-written API documentation**.
 
-The project is intentionally structured around **two small REST APIs**, built in sequence.  
-Each API serves a different learning purpose while sharing the same conceptual model and documentation principles.
+The project is intentionally structured around **two small REST APIs**, built in sequence. Each API serves a distinct learning purpose while sharing the same conceptual model, structure, and documentation principles.
 
 ## Project Purpose
 
@@ -13,24 +12,21 @@ This project has three closely related goals:
 2. Build **simple, contract-first REST APIs**
 3. Practice writing **clear, human-centred API documentation**
 
-The emphasis is on understanding behaviour, structure, and explanation rather than building a production system.
+The emphasis is on understanding API behaviour, structure, and explanation rather than building a production system.
 
 ## Project Structure: Two APIs
 
 ### API 1 — Open Library Explorer
 
-The first REST API is built **on top of Open Library**.
+The first REST API is built on top of **Open Library data**, treated as an **external but locally stored dataset**.
 
-It acts as a thin API layer that:
-- Retrieves book data from Open Library
-- Normalises and reshapes responses
-- Exposes a small, stable set of endpoints
+For learning purposes, a **small, representative subset** of Open Library data is downloaded and stored locally (for example as a CSV file). This dataset is then **manually cleaned and normalised** before being used by the API. The API does not make live calls to Open Library.
 
 This API exists to:
 - Avoid manual data entry
 - Work with realistic, imperfect external data
 - Practice documenting behaviour when you **do not own the data**
-- Focus on API design, contracts, and documentation patterns
+- Focus on API contracts, behaviour, and documentation patterns
 
 This stage emphasises **reading, filtering, and presenting external data clearly**.
 
@@ -41,17 +37,17 @@ This stage emphasises **reading, filtering, and presenting external data clearly
 The second REST API is built around a **curated personal book collection**.
 
 This API:
-- Uses locally controlled data (CSV or database)
+- Uses locally controlled data (CSV or lightweight database)
 - Preserves the same conceptual API structure
 - Allows full control over schema, validation, and behaviour
 
 This stage exists to:
 - Practice API design when you **own the data**
-- Introduce data validation and consistency
-- Show how the same API concepts apply to first-party systems
+- Introduce stricter validation and consistency
 - Demonstrate that API behaviour can remain stable while data sources change
+- Contrast first-party API design with external data integration
 
-Together, the two APIs illustrate the difference between **external integration** and **first-party API design**.
+Together, the two APIs illustrate the difference between **wrapping external data** and **designing a first-party API**.
 
 ## Tooling (*add versions here*)
 
@@ -62,7 +58,7 @@ Together, the two APIs illustrate the difference between **external integration*
 - **Markdown, MkDocs & GitHub Pages** – project and API documentation  
 - **Postman** – manual API exploration and example requests  
 
-FastAPI is used to support explicit API contracts and a documentation-first workflow.
+FastAPI is used to support **explicit API contracts** and a documentation-first workflow, not for async performance or deployment complexity.
 
 ## Project Principles
 
@@ -84,9 +80,9 @@ A typical request flows through these conceptual layers:
 - **API layer** – routing, input validation, request handling
 - **Business logic** – filtering, rules, and behaviour
 - **Data access** – querying and mapping data
-- **Data source** – external API (Open Library) or local storage
+- **Data source** – local Open Library dataset or personal library data
 
-The response flows back through the same layers, where results are transformed, formatted, and returned as HTTP responses.
+The response flows back through the same layers, where results are transformed, formatted, and returned as an HTTP response.
 
 Not all layers are implemented as separate components in early versions.  
 They are kept conceptually distinct to support clarity and documentation.
@@ -111,7 +107,7 @@ This project explicitly practices the distinction between:
 ## Project Process & Learning Goals
 
 ### Input
-- API 1: Retrieve and reshape data from Open Library
+- API 1: Load and reshape a cleaned, local subset of Open Library data
 - API 2: Load curated personal library data
 - Core fields may include:
   - `book_title`
@@ -131,7 +127,8 @@ This project explicitly practices the distinction between:
 - Implement:
   - Listing and retrieval
   - Filtering and search
-  - Consistent error handling
+  - Consistent error handling and status codes
+- Follow readable, maintainable coding practices
 
 Advanced concerns (async optimisation, scaling, deployment) are intentionally deferred.
 
