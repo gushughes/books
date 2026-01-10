@@ -1,10 +1,13 @@
-site_name: Bookshelf Archive
+site_name: Bookshelf Documentation
+site_url: https://gushughes.github.io/books/
+site_description: REST API learning project documentation
+
 theme:
   name: material
   palette:
-      scheme: slate
-      primary: amber
-      accent: deep orange
+    scheme: slate
+    primary: amber
+    accent: deep orange
   font:
     text: Roboto Mono
     code: Fira Code
@@ -15,8 +18,9 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+
 nav:
   - Home: index.md
-  - Blog: blog/first-post.md
+
 extra_css:
   - stylesheets/extra.css
