@@ -1,17 +1,32 @@
-# Welcome to MkDocs
+# Welcome to Bookshelf Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Bookshelf is a **learning project** for building REST APIs and writing **clear, easy-to-understand documentation**.
 
-## Commands
+## About This Project
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This project builds **two small REST APIs**, one after the other. Each API teaches different things, but they both work with books and use the same basic structure.
 
-## Project layout
+### Project Goals
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. Learn Python by working with books
+2. Build simple REST APIs
+3. Write clear documentation that people can understand
+
+## The Two APIs
+
+### API 1 – Open Library Explorer
+
+The first API uses Open Library data that's been saved locally. This helps you work with real, messy data and learn to document an API when you don't control the data.
+
+### API 2 – Personal Library API
+
+The second API works with a personal book collection. This helps you design an API when you own the data and can add stricter rules.
+
+## Getting Started
+
+Documentation coming soon!
+
+## Quick Links
+
+- [View on GitHub](https://github.com/gushughes/books)
+- [Project README](https://github.com/gushughes/books/blob/main/README.md)
