@@ -1,155 +1,146 @@
-# Bookshelf
+Bookshelf
+Bookshelf is a learning project for building REST APIs. The main goal is to write clear, easy-to-understand documentation.
+The project makes two small REST APIs, one after the other. Each API teaches different things, but they both work with books and use the same basic structure.
+What This Project Does
+This project has three goals:
 
-Bookshelf is a **learning-focused REST API project** designed to explore modern API development while **prioritising clear, human-written API documentation**.
+Learn Python by working with books
+Build simple REST APIs
+Write clear documentation that people can understand
 
-The project is intentionally structured around **two small REST APIs**, built in sequence. Each API serves a distinct learning purpose while sharing the same conceptual model, structure, and documentation principles.
+The aim is to understand how APIs work and how to explain them, not to build something for real use.
+The Two APIs
+API 1 – Open Library Explorer
+The first API uses Open Library data that's been saved locally.
+A small sample of Open Library data is downloaded and saved locally (as a CSV file). This data is then cleaned by hand before the API uses it. The API doesn't connect to Open Library directly.
+This API helps you:
 
-## Project Purpose
+Avoid typing in data by hand
+Work with real, messy data
+Learn to document an API when you don't control the data
+Focus on how the API works
 
-This project has three closely related goals:
+This stage is about reading, filtering, and showing external data.
 
-1. Learn Python through a concrete, bounded problem domain (books)
-2. Build **simple, contract-first REST APIs**
-3. Practice writing **clear, human-centred API documentation**
-
-The emphasis is on understanding API behaviour, structure, and explanation rather than building a production system.
-
-## Project Structure: Two APIs
-
-### API 1 — Open Library Explorer
-
-The first REST API is built on top of **Open Library data**, treated as an **external but locally stored dataset**.
-
-For learning purposes, a **small, representative subset** of Open Library data is downloaded and stored locally (for example as a CSV file). This dataset is then **manually cleaned and normalised** before being used by the API. The API does not make live calls to Open Library.
-
-This API exists to:
-- Avoid manual data entry
-- Work with realistic, imperfect external data
-- Practice documenting behaviour when you **do not own the data**
-- Focus on API contracts, behaviour, and documentation patterns
-
-This stage emphasises **reading, filtering, and presenting external data clearly**.
-
----
-
-### API 2 — Personal Library API
-
-The second REST API is built around a **curated personal book collection**.
-
+API 2 – Personal Library API
+The second API works with a personal book collection.
 This API:
-- Uses locally controlled data (CSV or lightweight database)
-- Preserves the same conceptual API structure
-- Allows full control over schema, validation, and behaviour
 
-This stage exists to:
-- Practice API design when you **own the data**
-- Introduce stricter validation and consistency
-- Demonstrate that API behaviour can remain stable while data sources change
-- Contrast first-party API design with external data integration
+Uses data you control (CSV or simple database)
+Keeps the same basic structure
+Gives you full control over the data
 
-Together, the two APIs illustrate the difference between **wrapping external data** and **designing a first-party API**.
+This stage helps you:
 
-## Tooling (*add versions here*)
+Design an API when you own the data
+Add stricter rules
+Show that APIs can stay the same even when the data source changes
+Compare working with external data versus your own data
 
-- **Python (Spyder IDE)** – scripting and API implementation  
-- **FastAPI** – API framework, chosen for early schema visibility and OpenAPI generation  
-- **Pandas & NumPy** – data loading and preprocessing  
-- **GitHub** – version control  
-- **Markdown, MkDocs & GitHub Pages** – project and API documentation  
-- **Postman** – manual API exploration and example requests  
+Together, the two APIs show the difference between using external data and designing your own API.
+Tools Used (add versions here)
 
-FastAPI is used to support **explicit API contracts** and a documentation-first workflow, not for async performance or deployment complexity.
+Python (Spyder IDE) – writing code
+FastAPI – API framework
+Pandas & NumPy – working with data
+GitHub – version control
+Markdown, MkDocs & GitHub Pages – documentation
+Postman – testing the API
 
-## Project Principles
+FastAPI is used because it supports clear API contracts and helps with documentation.
+Project Rules
+This project follows simple rules:
 
-This project follows a small set of intentional constraints:
+Define the API early and keep it simple
+Write documentation at the same time as code
+Use auto-generated documentation plus human explanations
+Focus on examples and real use
+Tools should make things clearer
 
-- API contracts are defined early and kept simple
-- Documentation is written alongside the code, not after
-- Auto-generated documentation is supported by human-written explanations
-- Examples and workflows are prioritised over completeness
-- Tooling serves clarity, not the other way around
+How the APIs Are Organised
+Both APIs follow the same layered structure.
+A request goes through these layers:
 
-## Conceptual Architecture
+Client – browser, curl, or Postman
+API layer – routing and checking inputs
+Business logic – filtering and rules
+Data access – getting data
+Data source – the actual data
 
-Although the project is intentionally small, both APIs follow the same **layered conceptual model**.
+The response comes back through the same layers and is sent as an HTTP response.
+Not all layers are separate parts in early versions. They're kept separate in concept to make things clearer.
+Why Documentation Matters
+Modern frameworks can automatically create:
 
-A typical request flows through these conceptual layers:
+Lists of endpoints
+Schemas
+Basic examples
 
-- **Client** – browser, curl, or Postman
-- **API layer** – routing, input validation, request handling
-- **Business logic** – filtering, rules, and behaviour
-- **Data access** – querying and mapping data
-- **Data source** – local Open Library dataset or personal library data
+But automation doesn't explain:
 
-The response flows back through the same layers, where results are transformed, formatted, and returned as an HTTP response.
+Why endpoints exist
+How to use them together
+How edge cases work
+Where things might fail
 
-Not all layers are implemented as separate components in early versions.  
-They are kept conceptually distinct to support clarity and documentation.
+This project practises the difference between:
 
-## Why Documentation Still Matters
+Generated documentation
+Human-written explanations
 
-Modern frameworks can automatically generate:
-- Endpoint lists
-- Schemas
-- Basic request and response examples
+Project Steps
+Input
 
-Automation describes the *surface* of an API, but it does not explain:
-- Why endpoints exist
-- How they are intended to be used together
-- How edge cases are handled
-- Where failures occur in the request flow
+API 1: Load cleaned Open Library data
+API 2: Load personal library data
+Core fields include:
 
-This project explicitly practices the distinction between:
-- **Generated reference documentation**
-- **Human-written explanations of behaviour and intent**
+book_title
+author
+author_nationality
+first_published
+page_count
+genre
 
-## Project Process & Learning Goals
 
-### Input
-- API 1: Load and reshape a cleaned, local subset of Open Library data
-- API 2: Load curated personal library data
-- Core fields may include:
-  - `book_title`
-  - `author`
-  - `author_nationality`
-  - `first_published`
-  - `page_count`
-  - `genre`
 
-### Handling
-- Inspect data structure and quality
-- Perform minimal, explicit data cleaning
-- Design REST-style resources such as:
-  - `/books`
-  - `/books/{id}`
-  - `/authors`
-- Implement:
-  - Listing and retrieval
-  - Filtering and search
-  - Consistent error handling and status codes
-- Follow readable, maintainable coding practices
+Work Done
 
-Advanced concerns (async optimisation, scaling, deployment) are intentionally deferred.
+Look at data structure and quality
+Clean data (minimal, clear steps)
+Design REST resources like:
 
-### Output
-- Two working, intentionally small REST APIs
-- Clear, structured API documentation for each API
-- A GitHub Pages site generated with MkDocs
+/books
+/books/{id}
+/authors
 
-## How to Read This Project
 
-This project is designed to be read **from the outside in**:
+Add:
 
-- Start with the documentation
-- Follow example requests and workflows
-- Use the architecture model to understand behaviour
-- Refer to the code to see how responsibilities are implemented
+Listing and getting individual items
+Filtering and search
+Consistent error handling
 
-The goal is to build a mental model of how APIs behave and how they should be explained.
 
-## License
+Write readable, maintainable code
 
-This project is licensed under the  
-[Creative Commons Attribution 4.0 International License](LICENSE).  
-See the LICENSE file for details.
+Advanced topics (async, scaling, deployment) are left for later.
+Output
+
+Two working, deliberately small REST APIs
+Clear, structured documentation for each API
+A GitHub Pages site made with MkDocs
+
+How to Read This Project
+Read this project from the outside in:
+
+Start with the documentation
+Follow example requests
+Use the architecture model to understand how it works
+Look at the code to see how it's built
+
+The goal is to understand how APIs work and how to explain them.
+Licence
+This project uses the
+Creative Commons Attribution 4.0 International Licence.
+See the LICENCE file for details.
